@@ -20,27 +20,26 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
     <header class="page-header" role="banner">
       <h1 class="project-name">I Love ZY</h1>
     </header>
-
-    <div id="gitalk-container"></div>
+    
+    <div id="container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
-      var gitalk = new Gitalk({
-      clientID: 'b646446bb961e9c2d8bb',
-      clientSecret: '1315fd3f7cf18fc0faaf50fb6fd53b5b97d47f84',
-      repo: 'https://github.com/fungi8/fungi8.github.io',
+    var gitment = new Gitment({
+      id: 'location.href', // 可选。默认为 location.href
       owner: 'fungi8',
-      admin: ['fungi8'],
-      id: location.href,      // Ensure uniqueness and length less than 50
-      distractionFreeMode: false  // Facebook-like distraction free mode 
-      })
-
-    gitalk.render('gitalk-container')
+      repo: 'https://github.com/fungi8/storageIssuses.git',
+      oauth: {
+        client_id: 'b5ce183fa6eb6741871e',
+        client_secret: 'e521acea676cf1fd778806162290fe9362a3649c',
+      },
+    })
+    gitment.render('container')
     </script>
-
 
 
 
