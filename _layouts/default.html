@@ -25,6 +25,7 @@
     <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
     <header class="page-header" role="banner">
       <h1 class="project-name">I Love ZY</h1>
+      <!-- <h2 id="time" class="project-tagline" onload="timeFn()"></h2> -->
       <script>
           // function timeFn() {//di作为一个变量传进来
           var d1 = "2018-09-19";
@@ -43,10 +44,9 @@
           var seconds=Math.round(leave3/1000)
           console.log(" 相差 "+dayDiff+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒")
           var t = dayDiff+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+"秒";
-         document.write("<h2 class=\"project-tagline\">"+t+"</h2>")
-          // }
+          document.write("<h2 class=\"project-tagline\">我们在一起的第"+dayDiff+"天</h2>")
+          // }  
         </script>
-      <!-- <h2 class="project-tagline" onload="timeFn()"></h2> -->
     </header>
 
     <main id="content" class="main-content" role="main">
