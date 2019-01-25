@@ -25,7 +25,7 @@
     <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
     <header class="page-header" role="banner">
       <h1 class="project-name">I Love ZY</h1>
-      <h2 class="project-tagline"></h2>
+      <h2 class="project-tagline" onload="timeFn(2018-09-19)"></h2>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -52,7 +52,7 @@
     </main>
 
     <script>
-        // function timeFn(d1) {//di作为一个变量传进来
+       function timeFn(d1) {//di作为一个变量传进来
        //如果时间格式是正确的，那下面这一步转化时间格式就可以不用了
        var dateBegin = new Date(d1.replace(/-/g, "/"));//将-转化为/，使用new Date
        var dateEnd = new Date();//获取当前时间
@@ -67,10 +67,9 @@
        var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
        var seconds=Math.round(leave3/1000)
        console.log(" 相差 "+dayDiff+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒")
-       var t1 = "2018-09-19";
        var t = dayDiff+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+"秒";
-       document.getElementsByTagName(h2).innerHTML = t;
-       timeFn(t1);
+       document.getElementsByTagName(h2).innerHTML=t;
+       }
      </script>
   </body>
 </html>
