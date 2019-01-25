@@ -16,7 +16,7 @@
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mo  bile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
@@ -26,21 +26,24 @@
       <h1 class="project-name">I Love ZY</h1>
     </header>
 
-    <div id="container"></div>
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <div id="gitalk-container"></div>
     <script>
-    var gitment = new Gitment({
-      id: 'location.href', // 可选。默认为 location.href
+      var gitalk = new Gitalk({
+      clientID: 'b646446bb961e9c2d8bb',
+      clientSecret: '1315fd3f7cf18fc0faaf50fb6fd53b5b97d47f84',
+      repo: 'https://github.com/fungi8/fungi8.github.io',
       owner: 'fungi8',
-      repo: 'https://github.com/fungi8/storageIssuses',
-      oauth: {
-        client_id: 'afe9798abcf92828b329',
-        client_secret: 'a6bc76b7160d152ce2782326b6bfe414b5bcfcec',
-      },
-    })
-    gitment.render('container')
+      admin: ['fungi8'],
+      id: location.href,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode 
+      })
+
+    gitalk.render('gitalk-container')
     </script>
+
+
+
+
 
     <main id="content" class="main-content" role="main">
       {{ content }}
