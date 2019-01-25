@@ -18,11 +18,28 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mo  bile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script>
+        function daysBetween(DateOne,DateTwo)  
+          {   
+              var OneMonth = DateOne.substring(5,DateOne.lastIndexOf ('-'));  
+              var OneDay = DateOne.substring(DateOne.length,DateOne.lastIndexOf ('-')+1);  
+              var OneYear = DateOne.substring(0,DateOne.indexOf ('-'));  
+            
+              var TwoMonth = DateTwo.substring(5,DateTwo.lastIndexOf ('-'));  
+              var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ('-')+1);  
+              var TwoYear = DateTwo.substring(0,DateTwo.indexOf ('-'));  
+            
+              var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear)- Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear))/86400000);   
+              return Math.abs(cha);  
+          }
+        </script>  
   </head>
   <body>
+    
     <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
     <header class="page-header" role="banner">
       <h1 class="project-name">I Love ZY</h1>
+      <div class="button" onload="daysBetween(new Date(), 2018-09-19)"/>
     </header>
 
     <main id="content" class="main-content" role="main">
